@@ -7,10 +7,13 @@ body {
 .header {
 	background-color: black;
 	position: fixed;
-	height: 30px;
+	height: 35px;
 	width: 100%;
 	z-index: 5;
 	margin: 0 auto;
+	margin-left: -8px;
+	margin-top: -8px;
+	padding: 0;
 }
 
 .navbar ul {
@@ -31,5 +34,4 @@ body {
 	width: 900px;
 	margin: 0 auto;
 	height: 100%;
-	overflow: none;
 }
