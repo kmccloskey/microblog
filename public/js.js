@@ -22,9 +22,11 @@ $(document).ready(function () {
 	});
 	$(".signin").click( function() {
 		$(".signin_form").fadeIn(600)
+    $(".signup_form").fadeOut(0001)
 	});
 
-	$("signup").click( function() {
+	$(".signup").click( function() {
 		$(".signup_form").fadeIn(600)
+    $(".signin_form").fadeOut(0001)
 	});
 });
