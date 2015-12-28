@@ -9,8 +9,8 @@ $(document).ready(function () {
       		var submessage = 'password cannot be less than 6 characters'
     	}else if($("#password").val() != $("#password2").val()){
       		var submessage = 'The two passwords you provided do not match.'    		
-    	}else{
-    		var submessage = ""
+    	// }else if ($(#password3).val()!=user.password) {{
+    	// 	var submessage = "Incorrect password"
     	};
     	if(submessage == "") {
     		return;
@@ -18,5 +18,6 @@ $(document).ready(function () {
    		 	$( "#validform" ).text( submessage ).show().fadeOut( 2000 );
     		event.preventDefault();
    		}
+		console.log("submit")
 	});
 });
