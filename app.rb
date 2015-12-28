@@ -24,14 +24,12 @@ def mumbl(text_post)
 	return new_post
 end
 
-
-
 # routes
 
 # -------------------gets-----------------------
 # Landing page is unaccessable once you click into the site.
 get '/' do 
-	erb :landing
+	erb :landing, :layout => :landing_style
 end	
 
 

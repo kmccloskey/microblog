@@ -6,7 +6,6 @@ body {
 
 .header {
 	background-color: black;
-	position: fixed;
 	height: 35px;
 	width: 100%;
 	z-index: 5;
@@ -35,3 +34,34 @@ body {
 	margin: 0 auto;
 	height: 100%;
 }
+
+.header a {
+	text-decoration: none;
+	color: white;
+	font-family: Georgia;
+}
+
+.login_box {
+	text-align: center;
+	margin-top: 200px;
+	color: white;
+	font-size: 5vw;
+	border: 2px solid white;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
