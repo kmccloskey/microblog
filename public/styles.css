@@ -42,11 +42,17 @@ body {
 }
 
 .login_box {
+	width: 100%;
 	text-align: center;
 	margin-top: 200px;
-	color: white;
+}
+
+.landing_title {
+	border: 2px solid white;
+	width: 100%;
+	margin: 0 auto;
 	font-size: 5vw;
-	border: 2px solid white;	
+	color: white;
 }
 
 

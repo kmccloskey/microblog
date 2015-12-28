@@ -49,20 +49,37 @@ get '/followers' do
 
 end
 
+get '/sign_up' do
+	erb :signup
+end
+get '/sign_in' do
+	erb :signin
+end
+get '/sign_out' do
+	erb :signout
+end
 
 
 # -------------------posts----------------------
 
 post '/sign_up' do
 
+	erb :home
 end
 
 post '/sign_in' do
 
+	erb :home
 end
 
 post '/sign_out' do
 
+	erb :landing
+end
+
+post '/settings' do
+
+	erb :settings
 end
 
 post '/follow' do
