@@ -52,6 +52,7 @@ get '/followers' do
 end
 
 get '/sign_up' do
+	
 	erb :signup
 end
 get '/sign_in' do
