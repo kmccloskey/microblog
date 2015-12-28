@@ -55,13 +55,11 @@ post '/sign_up' do
 end
 
 post '/sign_in' do
-	erb :signin
 	@user = User.where(username: params[:username]).first
 	if @user && @user.password == params[:password]
-    	flash[:notice] = "You've been signed in successfully."
     	session[:user_id] = @user.id
   	else
-	    flash[:alert] = "There was a problem signing you in."
+	    flash[:alert] = "Are you sure you have the correct username and password?"
     	redirect '/'
 	end
   	redirect '/home'

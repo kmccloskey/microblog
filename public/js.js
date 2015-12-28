@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	submessage = ""
 	$( "form" ).submit(function( event ) {
-		if ($('input').val().length==0){
+		if ($('input<signup_form').val().length==0){
 			console.log('blank cells')
 			submessage = "Form is not fully filled out!"
     	}
@@ -13,13 +13,16 @@ $(document).ready(function () {
     	// 	var submessage = "Incorrect password"
     	};
     	if(submessage == "") {
-    		return;
+			console.log("submit")
+    		event.preventDefault();
+    		// return;
     	}else{
    		 	$( "#validform" ).text( submessage ).show().fadeOut( 2000 );
     		event.preventDefault();
    		}
-		console.log("submit")
 	});
+
+	// showing and hiding forms
 	$(".signin").click( function() {
 		$(".signin_form").fadeIn(600)
     $(".signup_form").fadeOut(0001)
