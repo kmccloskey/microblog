@@ -1,11 +1,44 @@
-<div class="login_box">
-	<div class="landing_title">
-		Wlcom to Mumblr!
+<div class="landing_title">
+	Wlcom to Mumblr!
+</div>
+<div class="login_center">
+	<div class="signin">
+		<a href="#">Sgn In</a>
 	</div>
-	<div class="sing_in">
+	<div class="signup">
+		<a href="#">Gt Startd</a>
+	</div>
+</div>
+<div class="signin_form">
+	<h1>Sign In:</h1>
+	<form method="POST" action="/sign_in" id="signinform">
+		<span id="validform"></span>
+		<br>
+		<label for="username">Username</label>
+		<input type="text" name="username">
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" class="password">
+		<input id="submit_button" type="submit">
+	</form>
+</div>
 
-	</div>
-	<div class="sign_up">
-
-	</div>
+<div class="signup_form">
+	<h1>Sign Up</h1>
+	<form method="POST" action="/sign_up" id="signupform">
+		<span id="validform"></span>
+		<br>
+		<label for="email">Email</label>
+		<input type="email" name="email">
+		<label for="username">Username</label>
+		<input type="text" name="username">
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" class="password">
+		<label for="password2">Confirm Password</label>
+		<input type="password" name="password2" id="password2" class="password">
+		<label for="fname">First Name</label>
+		<input type="text" name="fname">
+		<label for="lname">Last Name</label>
+		<input type="text" name="lname">
+		<input id="submit_button" type="submit">
+	</form>
 </div>

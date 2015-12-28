@@ -28,4 +28,11 @@ $(document).ready(function () {
     	$( "#validform" ).text( submessage ).show().fadeOut( 2000 );
     	event.preventDefault();
 	});
+	$(".signin").click( function() {
+		$(".signin_form").fadeIn(600)
+	});
+
+	$("signup").click( function() {
+		$(".signup_form").fadeIn(600)
+	});
 });
