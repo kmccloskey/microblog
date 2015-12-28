@@ -7,6 +7,14 @@ set :database, "sqlite3:testdata.sqlite3"
 set :sessions, true
 
 # functions
+current_user = User.find(1)
+# def current_user
+# 	if session[:user_id]
+# 		User.find(session[:user_id])
+# 	else
+# 		nil
+# 	end
+# end
 
 def mumbl(text_post)
 	even_count=0
@@ -41,7 +49,8 @@ end
 # Profile page should work for self or others
 # features include account details, all posts, followers/following counts like on github
 get '/profile' do
-
+	@user = current_user
+	erb :profile
 end
 
 # should contain lists of followers and people followed with options to follow/unfollow
@@ -81,6 +90,10 @@ post '/settings' do
 end
 
 post '/follow' do
+
+end
+
+post '/edit_settings' do
 
 end
 

@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228163353) do
+ActiveRecord::Schema.define(version: 20151228215321) do
 
   create_table "posts", force: :cascade do |t|
     t.string "content"
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "bio"
-    t.string "age"
-    t.string "location"
+    t.string  "bio"
+    t.string  "age"
+    t.string  "location"
+    t.integer "user_id"
   end
 
   create_table "relationships", force: :cascade do |t|
