@@ -1,0 +1,10 @@
+.edit_profile_form {
+	/*margin-top: 50px;*/
+	width: 300px;
+	height: 400px;
+}
+
+.settings_input {
+	font-size: 15px;
+	margin: 0 10px 10px 0;
+}
