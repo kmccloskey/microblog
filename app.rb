@@ -32,14 +32,12 @@ def mumbl(text_post)
 	return new_post
 end
 
-
-
 # routes
 
 # -------------------gets-----------------------
 # Landing page is unaccessable once you click into the site.
 get '/' do 
-	erb :landing
+	erb :landing, :layout => :landing_style
 end	
 
 
@@ -60,33 +58,33 @@ get '/followers' do
 
 end
 
-get '/sign_up' do
-	erb :signup
+post '/sign_up' do
+	User.create(params[:user])
+	redirect '/home'
 end
-get '/sign_in' do
+
+post '/sign_in' do
 	erb :signin
+	@user = User.where(username: params[:username]).first
+	if @user && @user.password == params[:password]
+    	flash[:notice] = "You've been signed in successfully."
+    	session[:user_id] = @user.id
+  	else
+	    flash[:alert] = "There was a problem signing you in."
+    	redirect '/'
+	end
+  	redirect '/home'
 end
-get '/sign_out' do
-	erb :signout
+
+post '/sign_out' do
+	session[:user_id] = nil
+	redirect '/'
 end
 
 
 # -------------------posts----------------------
 
-post '/sign_up' do
 
-	erb :home
-end
-
-post '/sign_in' do
-
-	erb :home
-end
-
-post '/sign_out' do
-
-	erb :landing
-end
 
 post '/settings' do
 

@@ -8,7 +8,6 @@ body {
 
 .header {
 	background-color: black;
-	position: fixed;
 	height: 35px;
 	width: 100%;
 	z-index: 5;
@@ -38,3 +37,117 @@ body {
 	margin-top: 50px;
 	height: 100%;
 }
+
+.header a {
+	text-decoration: none;
+	color: white;
+	font-family: Georgia;
+}
+
+.landing_title {
+	width: 900px;
+	margin: 0 auto;
+	font-size: 5vw;
+	color: white;
+	text-align: center;
+	margin-top: 200px;
+	text-shadow: 2px 2px black;
+}
+
+.login_center {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 35px;
+}
+
+.signin {
+	margin: 0 auto;
+	width: 310px;
+	border: 2px solid white;
+	display: inline-block;
+}
+
+.signin a {
+	text-decoration: none;
+	color: white;
+	padding: 0px 100px 0px 100px;
+	font-size: 30px;
+	width: 350px;
+	text-shadow: 2px 2px black;
+}
+
+.signup {
+	margin: 0 auto;
+	width: 310px;
+	border: 2px solid white;
+	display: inline-block;
+}
+
+.signup a {
+	text-decoration: none;
+	color: white;
+	padding: 0px 100px 0px 100px;
+	font-size: 30px;
+	width: 100%;
+	text-shadow: 2px 2px black;
+}
+
+.signup:hover {
+	background-color: #DFFDDF;
+	text-shadow: none;
+}
+
+.signin:hover {
+	background-color: #DFFDDF;
+}
+
+.signin_form {
+	text-align: center;
+	background-color: #DFFDDF;
+	padding-bottom: 30px;
+	width: 900px;
+	margin: 0 auto;
+	display: none;
+}
+
+#signinform {
+	width: 100%;
+}
+
+.signup_form {
+	text-align: center;
+	background-color: #DFFDDF;
+	padding-bottom: 30px;
+	width: 900px;
+	margin: 0 auto;
+	display: none;
+}
+
+#singupform {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
