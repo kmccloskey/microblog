@@ -80,8 +80,8 @@ post '/sign_up' do
 end
 
 post '/sign_in' do
-	@user = User.where(username: params[:username]).first
-	if @user && @user.password == params[:password]
+	@user = User.where(username: params[:username1]).first
+	if @user && @user.password == params[:password3]
     	session[:user_id] = @user.id
   	else
 	    flash[:alert] = "Are you sure you have the correct username and password?"

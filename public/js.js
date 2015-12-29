@@ -34,8 +34,8 @@ $(document).ready(function () {
 
    	$( "#signinform" ).submit(function( event ) {
 		var submessage = ""
-		console.log(submessage)
-    	event.preventDefault();
+		// console.log(submessage)
+    	// event.preventDefault();
 		if($('#signinform > input').val().length===0){
 			var submessage = "Please input your credentials to sign in."
     	}else{
