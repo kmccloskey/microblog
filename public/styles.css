@@ -8,13 +8,11 @@ body {
 
 .header {
 	background-color: black;
-	height: 35px;
+	height: 55px;
 	width: 100%;
-	z-index: 5;
-	margin: 0 auto;
-	margin-left: -8px;
-	margin-top: -8px;
-	padding: 0;
+	display: inline-block;
+	font-family: 'Ultra', serif;
+	font-size: 25px;
 }
 
 .navbar ul {
@@ -23,7 +21,6 @@ body {
 
 .navbar li {
     color: white;
-    text-align: center;
     padding: 0px 16px;
     text-decoration: none;
     float: right;
@@ -41,7 +38,6 @@ body {
 .header a {
 	text-decoration: none;
 	color: white;
-	font-family: Georgia;
 }
 
 .landing_title {
