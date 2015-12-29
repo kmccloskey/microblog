@@ -16,14 +16,14 @@ $(document).ready(function () {
 
    	$( "#signupform" ).submit(function( event ) {
 		var submessage = ""
-    	if($("#password").val().length < 6){
-      		var submessage = 'password cannot be less than 6 characters'
+    	if($('#signupform > input').val().length===0){
+			var submessage = "Form is not fully filled out!"
 			// console.log(submessage)
     	}else if($("#password").val() != $("#password2").val()){
       		var submessage = 'The two passwords you provided do not match.'    		
 			// console.log(submessage)
-    	}else if($('input<#signupform').val().length===0){
-			var submessage = "Form is not fully filled out!"
+    	}else if($("#password").val().length < 6){
+      		var submessage = 'password cannot be less than 6 characters'
 			// console.log(submessage)
     	}else{
     		return;   		
@@ -35,13 +35,12 @@ $(document).ready(function () {
    	$( "#signinform" ).submit(function( event ) {
 		var submessage = ""
 		console.log(submessage)
-    	if($('username').val().length===0){
-			var submessage = "Please enter your username!"
-			console.log(submessage)
-    	}else if($('password3').val().length===0){
-			var submessage = "Please enter your password!"
-			console.log(submessage)
-    	};
+    	event.preventDefault();
+		if($('#signinform > input').val().length===0){
+			var submessage = "Please input your credentials to sign in."
+    	}else{
+			return
+    	}
     	$( "#validform" ).text( submessage ).show().fadeOut( 2000 );
     	event.preventDefault();
    	});

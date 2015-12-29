@@ -94,7 +94,9 @@ post '/follow' do
 end
 
 post '/edit_settings' do
-
+	@user = current_user
+	@user.update(fname:params[:fname], lname:params[:lname], email:params[:email])
+	@user.profile.update(bio:params[:bio], age:params[:age], location:params[:location])
 end
 
 # route for new posts
