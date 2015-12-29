@@ -55,7 +55,7 @@ end
 
 # should contain lists of followers and people followed with options to follow/unfollow
 get '/followers' do
-
+	erb :followers
 end
 
 post '/sign_up' do
