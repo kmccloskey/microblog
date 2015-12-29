@@ -7,14 +7,14 @@ set :database, "sqlite3:testdata.sqlite3"
 set :sessions, true
 
 # functions
-# current_user = User.find(1)
-# def current_user
-# 	if session[:user_id]
-# 		User.find(session[:user_id])
-# 	else
-# 		nil
-# 	end
-# end
+
+def current_user
+	if session[:user_id]
+		User.find(session[:user_id])
+	else
+		nil
+	end
+end
 
 def mumbl(text_post)
 	even_count=0
@@ -43,6 +43,10 @@ end
 
 # homepage with 'feed' and site details
 get '/home' do
+	@user = current_user
+	puts "*****************"
+	puts @user.fname
+	puts "*****************"
 	erb :home
 end
 
@@ -60,8 +64,10 @@ end
 
 post '/sign_up' do
 	User.create(params[:user])
+	Profile.create(user_id:params[:user_id])
 	redirect '/home'
 end
+
 
 post '/sign_in' do
 	# @user = User.where(username: params[:username]).first
