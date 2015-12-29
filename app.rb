@@ -6,6 +6,22 @@ configure(:development){set :database, "sqlite3:blog.sqlite3"}
 set :database, "sqlite3:testdata.sqlite3"
 set :sessions, true
 
+
+require 'bundler/setup' 
+require 'rack-flash'
+enable :sessions
+use Rack::Flash, :sweep => true
+
+
+
+def current_user
+  if session[:user_id]
+    User.find(session[:user_id])  
+  else
+    nil
+  end
+end
+
 # functions
 # current_user = User.find(1)
 # def current_user
