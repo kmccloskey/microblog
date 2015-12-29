@@ -8,9 +8,9 @@ set :sessions, true
 
 
 require 'bundler/setup' 
-require 'rack-flash'
+require 'sinatra/flash'
 enable :sessions
-use Rack::Flash, :sweep => true
+
 
 
 
