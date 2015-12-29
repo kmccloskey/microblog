@@ -17,13 +17,19 @@ body {
 
 .navbar ul {
 	list-style-type: none;
+	text-align: center;
 }
 
 .navbar li {
     color: white;
     padding: 0px 16px;
     text-decoration: none;
-    float: right;
+	text-align: center;
+	display: inline-block;
+}
+
+.navbar li:hover {
+	background-color: #E8B944;
 }
 
 .container {
@@ -135,6 +141,8 @@ body {
 .post_box {
 	text-align: center;
 	display: none;
+	background-color: black;
+	padding-bottom: 15px;
 }
 
 .post_box label {
@@ -148,9 +156,19 @@ body {
 	height: 150px;
 }
 
+.close_mumble a {
+	color: #E8B944;
+	text-decoration: none;
+	border: 1px solid #E8B944;
+	padding: 3px;
+}
 
-
-
+#new_post_button {
+	width: 100px;
+	background-color: #DFFDDF;
+	height: 35px;
+	margin-top: 10px;
+}
 
 
 
