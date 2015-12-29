@@ -14,23 +14,23 @@ $(document).ready(function () {
  //    	};
  //    });
 
-   	$( "#signupform" ).submit(function( event ) {
-		var submessage = ""
-    	if($('#signupform > input').val().length===0){
-			var submessage = "Form is not fully filled out!"
+$( "#signupform" ).submit(function( event ) {
+  var submessage = ""
+  if($('#signupform > input').val().length===0){
+   var submessage = "Form is not fully filled out!"
 			// console.log(submessage)
-    	}else if($("#password").val() != $("#password2").val()){
-      		var submessage = 'The two passwords you provided do not match.'    		
+   }else if($("#password").val() != $("#password2").val()){
+    var submessage = 'The two passwords you provided do not match.'    		
 			// console.log(submessage)
-    	}else if($("#password").val().length < 6){
-      		var submessage = 'password cannot be less than 6 characters'
+   }else if($("#password").val().length < 6){
+    var submessage = 'password cannot be less than 6 characters'
 			// console.log(submessage)
-    	}else{
-    		return;   		
-    	};
-    	$( "#validform1" ).text( submessage ).show().fadeOut( 2000 );
-    	event.preventDefault();
-   	});
+   }else{
+    return;   		
+  };
+  $( "#validform1" ).text( submessage ).show().fadeOut( 2000 );
+  event.preventDefault();
+});
 
    	$( "#signinform" ).submit(function( event ) {
 		var submessage = ""
@@ -51,12 +51,12 @@ $(document).ready(function () {
 	$(".signin").click( function() {
 		$(".signin_form").fadeIn(600)
     $(".signup_form").fadeOut(0001)
-	});
+  });
 
 	$(".signup").click( function() {
 		$(".signup_form").fadeIn(600)
     $(".signin_form").fadeOut(0001)
-	});
+  });
 
   // Show the post box from anywhere on the site, displaying at the top
   $(".new_mumble").click( function() {
@@ -64,5 +64,16 @@ $(document).ready(function () {
     $(".container").click( function() {
       $(".post_box").slideUp(800)
     });
+    $(".close_mumble").click( function() {
+      $(".post_box").slideUp(800)
+    });
   });
+  // text counter for mumble box
+  var text_max = 150;
+  $('#textarea_feedback').html(text_max + ' characters remaining');
+  $('#textarea').keyup(function() {
+    var text_length = $('#textarea').val().length;
+    var text_remaining = text_max - text_length;
+  $('#textarea_feedback').html(text_remaining + ' characters remaining');
+    });
 });
