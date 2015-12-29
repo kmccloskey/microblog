@@ -32,18 +32,18 @@ $( "#signupform" ).submit(function( event ) {
   event.preventDefault();
 });
 
-$( "#signinform" ).submit(function( event ) {
-  var submessage = ""
-  console.log(submessage)
-  event.preventDefault();
-  if($('#signinform > input').val().length===0){
-   var submessage = "Please input your credentials to sign in."
- }else{
-   return
- }
- $( "#validform" ).text( submessage ).show().fadeOut( 2000 );
- event.preventDefault();
-});
+   	$( "#signinform" ).submit(function( event ) {
+		var submessage = ""
+		// console.log(submessage)
+    	// event.preventDefault();
+		if($('#signinform > input').val().length===0){
+			var submessage = "Please input your credentials to sign in."
+    	}else{
+			return
+    	}
+    	$( "#validform" ).text( submessage ).show().fadeOut( 2000 );
+    	event.preventDefault();
+   	});
 
 
 
