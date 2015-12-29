@@ -22,7 +22,9 @@
 		<form method="POST" action="/post_mumble" id="mumble_post">
 			<label for="username">What are you mumbling about?</label>
 			<br>
-			<input type="text" name="username">
+			<textarea type="text" id="textarea" rows="4" cols="50" maxlength="150"></textarea>
+			<br>
+			<div id="textarea_feedback"></div>
 			<br>
 			<input id="new_post_button" type="submit" value="Mumble Me">
 		</form>

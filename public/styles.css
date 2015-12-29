@@ -170,10 +170,27 @@ body {
 	margin-top: 10px;
 }
 
+#textarea_feedback {
+	color: white;
+}
 
+.follower_list {
+	border: 1px solid black;
+	height: 550px;
+	width: 300px;
+	float: left;
+	overflow: scroll;
+	text-align: center;
+}
 
-
-
+.following_list {
+	border: 1px solid black;
+	height: 550px;
+	width: 300px;
+	float: right;
+	overflow: scroll;
+	text-align: center;
+}
 
 
 
