@@ -6,6 +6,22 @@ configure(:development){set :database, "sqlite3:blog.sqlite3"}
 set :database, "sqlite3:testdata.sqlite3"
 set :sessions, true
 
+
+require 'bundler/setup' 
+require 'sinatra/flash'
+enable :sessions
+
+
+
+
+def current_user
+  if session[:user_id]
+    User.find(session[:user_id])  
+  else
+    nil
+  end
+end
+
 # functions
 
 def current_user
@@ -70,14 +86,14 @@ end
 
 
 post '/sign_in' do
-	# @user = User.where(username: params[:username]).first
-	# if @user && @user.password == params[:password]
- #    	session[:user_id] = @user.id
- #  	else
-	#     flash[:alert] = "Are you sure you have the correct username and password?"
- #    	redirect '/'
-	# end
- #  	redirect '/home'
+	@user = User.where(username: params[:username1]).first
+	if @user && @user.password == params[:password3]
+    	session[:user_id] = @user.id
+  	else
+	    flash[:alert] = "Are you sure you have the correct username and password?"
+    	redirect '/'
+	end
+  	redirect '/home'
 end
 
 post '/sign_out' do

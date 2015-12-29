@@ -34,8 +34,8 @@ $(document).ready(function () {
 
    	$( "#signinform" ).submit(function( event ) {
 		var submessage = ""
-		console.log(submessage)
-    	event.preventDefault();
+		// console.log(submessage)
+    	// event.preventDefault();
 		if($('#signinform > input').val().length===0){
 			var submessage = "Please input your credentials to sign in."
     	}else{
@@ -57,4 +57,12 @@ $(document).ready(function () {
 		$(".signup_form").fadeIn(600)
     $(".signin_form").fadeOut(0001)
 	});
+
+  // Show the post box from anywhere on the site, displaying at the top
+  $(".new_mumble").click( function() {
+    $(".post_box").slideDown(800)
+    $(".container").click( function() {
+      $(".post_box").slideUp(800)
+    });
+  });
 });

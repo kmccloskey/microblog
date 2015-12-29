@@ -14,8 +14,18 @@
 					<li><a href="/home" class="home_link">Home</a></li>
 					<li><a href="/profile" class="profile_link">Profile</li>
 					<li><a href="/followers" class="followers_link">Followers</a></li>
+					<li><a href="#" class="new_mumble">New Mumble</a></li>
 				</ul>
 			</nav>
+		</div>
+		<div class="post_box">
+			<form method="POST" action="/post_mumble" id="mumble_post">
+				<label for="username">What are you mumbling about?</label>
+				<br>
+				<input type="text" name="username">
+				<br>
+				<input id="post_button" type="submit" value="post_it">
+			</form>
 		</div>
 	<div class="container">
 		<%= yield %>		
