@@ -12,23 +12,11 @@ require 'sinatra/flash'
 enable :sessions
 
 
-
-
-def current_user
-  if session[:user_id]
-    User.find(session[:user_id])  
-  else
-    nil
-  end
-end
-
 # functions
 
 def current_user
 	if session[:user_id]
-		User.find(session[:user_id])
-	else
-		nil
+		@current_user = User.find(session[:user_id])
 	end
 end
 
@@ -59,17 +47,24 @@ end
 
 # homepage with 'feed' and site details
 get '/home' do
-	@user = current_user
-	puts "*****************"
-	puts @user.fname
-	puts "*****************"
+	current_user
+	if session[:user_id]
+		puts "******************"
+		puts session[:user_id]
+		puts "******************"
+	else
+		puts "NOT WORKING"
+	end
+	if current_user.profile == nil
+		Profile.create(user_id:current_user.id, bio: "", age: "", location: "")
+	end
 	erb :home
 end
 
 # Profile page should work for self or others
 # features include account details, all posts, followers/following counts like on github
 get '/profile' do
-	@user = current_user
+	current_user
 	erb :profile
 end
 
@@ -80,8 +75,7 @@ end
 
 post '/sign_up' do
 	User.create(params[:user])
-	Profile.create(user_id:params[:user_id])
-	redirect '/home'
+	redirect '/'
 end
 
 
@@ -116,9 +110,10 @@ post '/follow' do
 end
 
 post '/edit_settings' do
-	@user = current_user
-	@user.update(fname:params[:fname], lname:params[:lname], email:params[:email])
-	@user.profile.update(bio:params[:bio], age:params[:age], location:params[:location])
+	current_user
+	current_user.update(fname:params[:fname], lname:params[:lname], email:params[:email])
+	current_user.profile.update(bio:params[:bio], age:params[:age], location:params[:location])
+	redirect '/profile'
 end
 
 # route for new posts
