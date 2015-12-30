@@ -48,13 +48,6 @@ end
 # homepage with 'feed' and site details
 get '/home' do
 	current_user
-	if session[:user_id]
-		puts "******************"
-		puts session[:user_id]
-		puts "******************"
-	else
-		puts "NOT WORKING"
-	end
 	if current_user.profile == nil
 		Profile.create(user_id:current_user.id, bio: "", age: "", location: "")
 	end
