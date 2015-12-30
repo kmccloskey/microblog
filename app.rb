@@ -6,10 +6,17 @@ configure(:development){set :database, "sqlite3:blog.sqlite3"}
 set :database, "sqlite3:testdata.sqlite3"
 set :sessions, true
 
-
 require 'bundler/setup' 
 require 'sinatra/flash'
 enable :sessions
+
+def current_user
+  if session[:user_id]
+    User.find(session[:user_id])  
+  else
+    nil
+  end
+end
 
 
 # functions
@@ -111,5 +118,5 @@ end
 
 # route for new posts
 post '/mumbl' do
-
+	# Post.create(contents: mumbl(params[:mumbl]))
 end
