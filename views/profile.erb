@@ -2,15 +2,16 @@
 <body>
 	<div class="edit_profile_form">
 		<form action="/edit_settings" method="POST">
-			<input class="settings_input" type="text" name="fname" value="<%= @user.fname %>">
-			<input class="settings_input" type="text" name="lname" value="<%= @user.lname %>">
-			<input class="settings_input" type="text" name="email" value="<%= @user.email %>">
+			<input class="settings_input" type="text" name="fname" value="<%= @current_user.fname %>">
+			<input class="settings_input" type="text" name="lname" value="<%= @current_user.lname %>">
+			<input class="settings_input" type="text" name="email" value="<%= @current_user.email %>">
 			<input type="submit">
-			<input class="settings_input" type="text" name="bio" value="<%= @user.profile.bio %>">
-			<input class="settings_input" type="text" name="age" value="<%= @user.profile.age %>">
-			<input class="settings_input" type="text" name="location" value="<%= @user.profile.location %>">
+			<textarea class="settings_input" type="text" name="bio"placeholder="bio"><%= @current_user.profile.bio %></textarea>
+			<input class="settings_input" type="text" name="age" value="<%= @current_user.profile.age %>"placeholder="age">
+			<input class="settings_input" type="text" name="location" value="<%= @current_user.profile.location %>"placeholder="location">
 		</form>
 	</div>
-	<h1><%= @user.fname %></h1>
+
 </body>
 </html>
+
