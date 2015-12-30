@@ -15,14 +15,17 @@
 				<li><a href="/profile" class="profile_link">| Profile |</li>
 				<li><a href="/followers" class="followers_link">| Followers |</a></li>
 				<li><a href="#" class="new_mumble">| New Mumble |</a></li>
+				<li><form method="POST" action="/sign_out" id="sign_out_button">
+					<input type="Submit" class="signOut_button" value="| Sign Out |">
+				</form></li>
 			</ul>
 		</nav>
 	</div>
 	<div class="post_box">
-		<form method="POST" action="/post_mumble" id="mumble_post">
+		<form method="POST" action="/mumbl" id="mumble_post">
 			<label for="username">What are you mumbling about?</label>
 			<br>
-			<textarea type="text" id="textarea" rows="4" cols="50" maxlength="150"></textarea>
+			<textarea type="text" id="textarea" name="mumbl" rows="4" cols="50" maxlength="150"></textarea>
 			<br>
 			<div id="textarea_feedback"></div>
 			<br>
