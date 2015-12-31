@@ -26,10 +26,9 @@ def current_user
 		@current_user = User.find(session[:user_id])
 	end
 end
-
-def mumbl(text_post)
+# Added new_post parameter so it could be used outside of the function.
+def mumbl(text_post, new_post)
 	even_count=0
-	new_post=""
 	(text_post.each_char).each do |letter|
 		if letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" || letter == "A" || letter == "E" || letter == "I" || letter == "O" || letter == "U"
 			even_count+=1
@@ -70,6 +69,7 @@ end
 
 # should contain lists of followers and people followed with options to follow/unfollow
 get '/followers' do
+	current_user
 	erb :followers
 end
 
@@ -118,5 +118,11 @@ end
 
 # route for new posts
 post '/mumbl' do
-	# Post.create(contents: mumbl(params[:mumbl]))
+	# new_post is here so it can be passed into mumbl function and used after.
+	new_post = ""
+	# passes mumbl into the mumbl function
+	mumbl(params[:mumbl], new_post)
+	# content of post is changed to mumblfied "new_post".
+	Post.create(content:new_post, user_id: current_user.id)
+
 end
