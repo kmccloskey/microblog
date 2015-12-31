@@ -1,15 +1,16 @@
 	body {
 	margin: 0px;
-	background-image: url(https://images.unsplash.com/photo-1428353115997-aecce574f422?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);
+	/*background-image: url(https://images.unsplash.com/photo-1428353115997-aecce574f422?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	/* Applies font to all elements within the body of every page. */
 	font-family: 'Ultra', serif;
+	background-color: #F6F4B9;
 }
 
 
 .header {
-	background-color: black;
+	background-color: #7E3C19;
 	height: 55px;
 	width: 100%;
 	display: inline-block;
@@ -35,7 +36,7 @@
 }
 
 .navbar li {
-    color: white;
+    color: black;
     padding: 0px 16px;
     text-decoration: none;
 	text-align: center;
@@ -43,17 +44,17 @@
 }
 
 .navbar li:hover {
-	background-color: #E8B944;
+	background-color: #E2A272;
 }
 
 .container {
-	background-color: #DFFDDF;
-	opacity: 0.6;
+	background-color: rgba(208, 30, 42, 0.8);
 	width: 900px;
 	margin: 0 auto;
 	margin-top: 50px;
 	padding: 0px 20px;
 	height: 100%;
+	border-radius: 25px;
 }
 
 .header a {
@@ -66,9 +67,17 @@
 	margin: 0 auto;
 	font-size: 5vw;
 	color: white;
-	text-align: center;
-	margin-top: 200px;
 	text-shadow: 2px 2px black;
+}
+
+.landing_background {
+	background-color: rgba(208, 30, 42, 0.2);
+	width: 900px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 25px;
+	border-radius: 25px;
 }
 
 .login_center {
