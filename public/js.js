@@ -76,4 +76,13 @@ $( "#signupform" ).submit(function( event ) {
     var text_remaining = text_max - text_length;
   $('#textarea_feedback').html(text_remaining + ' characters remaining');
     });
+
+  // PROFILE PAGE JAVASCRIPT
+
+  $('.edit_profile_form').hide();
+  $('.edit_profile_button').click(function (){
+    $('.edit_profile_form').show();
+    $('.edit_profile_button').hide();
+    $('.profile_info_container').hide();
+  });
 });
