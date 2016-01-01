@@ -11,13 +11,14 @@
 	height: 55px;
 	width: 100%;
 	display: inline-block;
-	font-family: 'Alfa Slab One', cursive;
-	font-size: 25px;
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 28px;
 }
 
 .navbar ul {
 	list-style-type: none;
 	text-align: center;
+	margin-top: 20px;
 }
 
 .navbar input {
@@ -28,7 +29,7 @@
 	display: inline;
 	border: none;
 	font-family: 'Cabin Sketch', cursive;
-	font-size: 25px;
+	font-size: 28px;
 	background-color: rgba(0, 0, 0, 0);
 }
 
@@ -114,7 +115,7 @@
 .signup a {
 	text-decoration: none;
 	color: white;
-	padding: 0px 100px 0px 100px;
+	padding: 0px 80px 0px 80px;
 	font-size: 30px;
 	width: 100%;
 	text-shadow: 2px 2px black;
@@ -177,7 +178,7 @@
 	text-align: center;
 	display: none;
 	background-color: black;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 
 .post_box label {
