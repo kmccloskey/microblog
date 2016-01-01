@@ -3,6 +3,7 @@
 	background-image: url(https://images.unsplash.com/photo-1422157245273-e08b638b4b00?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);
 	background-size: cover;
 	background-repeat: no-repeat;
+	font-family: 'Helvetica Neue', serif;
 }
 
 
@@ -227,6 +228,44 @@
 	overflow: scroll;
 	text-align: center;
 }
+
+.profile_posts_container p {
+	border: 2px solid black;
+	background-color: white;
+	word-wrap: break-word;
+	width: 100%;
+	border-radius: 25px;
+	padding: 5px;
+}
+
+.edit_profile_button {
+	background-color: #D21A22;
+	border: none;
+	border-radius: 25px;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
