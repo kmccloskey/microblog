@@ -1,20 +1,17 @@
 	body {
 	margin: 0px;
-	/*background-image: url(https://images.unsplash.com/photo-1428353115997-aecce574f422?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);*/
+	background-image: url(https://images.unsplash.com/photo-1422157245273-e08b638b4b00?crop=entropy&dpr=2&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);
 	background-size: cover;
 	background-repeat: no-repeat;
-	/* Applies font to all elements within the body of every page. */
-	font-family: 'Ultra', serif;
-	background-color: #F6F4B9;
 }
 
 
 .header {
-	background-color: #7E3C19;
+	background-color: black;
 	height: 55px;
 	width: 100%;
 	display: inline-block;
-	font-family: 'Ultra', serif;
+	font-family: 'Alfa Slab One', cursive;
 	font-size: 25px;
 }
 
@@ -30,7 +27,7 @@
 	padding: 0px;
 	display: inline;
 	border: none;
-	font-family: 'Ultra', serif;
+	font-family: 'Cabin Sketch', cursive;
 	font-size: 25px;
 	background-color: rgba(0, 0, 0, 0);
 }
@@ -44,11 +41,11 @@
 }
 
 .navbar li:hover {
-	background-color: #E2A272;
+	background-color: #F2C700;
 }
 
 .container {
-	background-color: rgba(208, 30, 42, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 900px;
 	margin: 0 auto;
 	margin-top: 50px;
@@ -68,10 +65,11 @@
 	font-size: 5vw;
 	color: white;
 	text-shadow: 2px 2px black;
+	font-family: 'Alfa Slab One', cursive;
 }
 
 .landing_background {
-	background-color: rgba(208, 30, 42, 0.2);
+	background-color: rgba(0, 0, 0, .3);
 	width: 900px;
 	text-align: center;
 	margin: 0 auto;
@@ -84,6 +82,7 @@
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 35px;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signin {
@@ -91,6 +90,7 @@
 	width: 310px;
 	border: 2px solid white;
 	display: inline-block;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signin a {
@@ -100,6 +100,7 @@
 	font-size: 30px;
 	width: 350px;
 	text-shadow: 2px 2px black;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signup {
@@ -107,6 +108,7 @@
 	width: 310px;
 	border: 2px solid white;
 	display: inline-block;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signup a {
@@ -116,24 +118,27 @@
 	font-size: 30px;
 	width: 100%;
 	text-shadow: 2px 2px black;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signup:hover {
-	background-color: #DFFDDF;
+	background-color: #F2C700;
 	text-shadow: none;
 }
 
 .signin:hover {
-	background-color: #DFFDDF;
+	background-color: #F2C700;
 }
 
 .signin_form {
 	text-align: center;
-	background-color: #DFFDDF;
+	background-color: #F2C700;
 	padding-bottom: 30px;
-	width: 900px;
+	width: 500px;
 	margin: 0 auto;
 	display: none;
+	border-radius: 25px;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 #signinform {
@@ -142,16 +147,18 @@
 
 .signup_form {
 	text-align: right;
-	background-color: rgba(223, 253, 223, 0.8);
+	background-color: #F2C700;
 	padding-bottom: 30px;
 	width: 300px;
 	margin: 0 auto;
 	display: none;
 	border-radius: 25px;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signup_form h1 {
 	text-align: center;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .signup_form input {
@@ -160,6 +167,10 @@
 
 #singupform {
 	width: 100%;
+}
+
+#signin_form input {
+	background-color: white;
 }
 
 .post_box {
@@ -215,7 +226,6 @@
 	overflow: scroll;
 	text-align: center;
 }
-
 
 
 
