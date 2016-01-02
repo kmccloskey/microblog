@@ -87,7 +87,7 @@ post '/sign_in' do
 	    flash[:alert] = "Are you sure you have the correct username and password?"
     	redirect '/'
 	end
-  	redirect '/profile'
+  	redirect '/home'
 end
 
 post '/sign_out' do
