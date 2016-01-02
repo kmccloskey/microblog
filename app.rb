@@ -87,7 +87,7 @@ post '/sign_in' do
 	    flash[:alert] = "Are you sure you have the correct username and password?"
     	redirect '/'
 	end
-  	redirect '/home'
+  	redirect '/profile'
 end
 
 post '/sign_out' do
@@ -114,6 +114,12 @@ post '/edit_settings' do
 	current_user.update(fname:params[:fname], lname:params[:lname], email:params[:email])
 	current_user.profile.update(bio:params[:bio], age:params[:age], location:params[:location])
 	redirect '/profile'
+end
+
+post '/delete_current_user' do
+	current_user
+	current_user.destroy
+	redirect '/'
 end
 
 # route for new posts

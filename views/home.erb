@@ -2,7 +2,7 @@
 <% Post.last(10).reverse.each do |post| %>
 	<div class="last_ten_post_container">
 		<div class="post_username">
-			<h3><%= post.user.username%> mumbls...</h1>
+			<h3><%= post.user.username%> mumbls...</h3>
 		</div>
 		<div class="post_content">
 			<%= post.content %>
