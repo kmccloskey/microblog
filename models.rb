@@ -20,9 +20,9 @@ class Relationship <ActiveRecord::Base
 end
 
 class Profile <ActiveRecord::Base
-	belongs_to :users
+	belongs_to :users	
 end
 
 class Post <ActiveRecord::Base
-	belongs_to :users
+	belongs_to :user
 end
