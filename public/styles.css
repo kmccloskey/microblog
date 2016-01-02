@@ -47,6 +47,7 @@
 }
 
 .container {
+	overflow: auto;
 	background-color: rgba(255, 255, 255, 0.5);
 	width: 900px;
 	margin: 0 auto;
