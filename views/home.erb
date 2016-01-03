@@ -4,9 +4,8 @@
 		<div class="post_username">
 			<form method="POST" action="/other">
 				<input hidden name="clicked_user" value="<%= post.user.username%>"/>
-				<button class="user_click"><%= post.user.username %></button> mumbls...	
+				<button class="user_click"><h3><%= post.user.username %></h3></button> mumbls...	
 			</form>
-			<h3><%= post.user.username%> mumbls...</h3>
 		</div>
 		<div class="post_content">
 			<%= post.content %>
