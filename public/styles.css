@@ -246,7 +246,12 @@
 	color: white;
 }
 
-
+.delete_user_button {
+	background-color: #D21A22;
+	border: none;
+	border-radius: 25px;
+	color: white;	
+}
 
 
 
