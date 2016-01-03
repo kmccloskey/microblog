@@ -114,7 +114,8 @@ post '/settings' do
 end
 
 post '/follow' do
-
+	current_user.follow!(User.where(username: params[:clicked_user]).first)
+	erb :followers
 end
 
 post '/edit_settings' do
