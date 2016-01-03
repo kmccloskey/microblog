@@ -12,7 +12,7 @@
 			<% current_user.posts.each do |post| %>
 					<p><%=post.content%></p>
 			<%end%>
-		</div>
+	</div>
 	<div class="edit_profile_form">
 		<form action="/edit_settings" method="POST">
 			<input class="settings_input" type="text" name="fname" placeholder="first name" value="<%= @current_user.fname %>">
@@ -24,7 +24,6 @@
 			<input type="submit">
 		</form>
 	</div>
-
 </body>
 </html>
 

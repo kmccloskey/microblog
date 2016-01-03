@@ -26,6 +26,7 @@ def current_user
 		@current_user = User.find(session[:user_id])
 	end
 end
+
 # Added new_post parameter so it could be used outside of the function.
 def mumbl(text_post, new_post)
 	even_count=0
@@ -65,6 +66,13 @@ end
 get '/profile' do
 	current_user
 	erb :profile
+end
+# for OTHER usersfeatures include account details, all posts, followers/following counts like on github
+post '/profile/other' do
+	puts "CHECK--------------------"
+	@clicked_user = User.where(username: params[:clicked_user]).first
+	puts @clicked_user
+	erb :other_profile
 end
 
 # should contain lists of followers and people followed with options to follow/unfollow

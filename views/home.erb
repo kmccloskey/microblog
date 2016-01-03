@@ -2,7 +2,10 @@
 <% Post.last(10).reverse.each do |post| %>
 	<div class="last_ten_post_container">
 		<div class="post_username">
-			<h3><%= post.user.username%> mumbls...</h1>
+			<form method="POST" action="/profile/other">
+				<input hidden class="hider" name="clicked_user" value="<%= post.user.username%>">
+				<button name="clicked_user"><%= post.user.username %></button> mumbls...	
+			</form>
 		</div>
 		<div class="post_content">
 			<%= post.content %>
