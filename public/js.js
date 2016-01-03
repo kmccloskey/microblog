@@ -70,11 +70,11 @@ $( "#signupform" ).submit(function( event ) {
   });
   // text counter for mumble box
   var text_max = 150;
-  $('#textarea_feedback').html(text_max + ' characters remaining');
+  $('#textarea_feedback').html(text_max + ' chractrs reminng');
   $('#textarea').keyup(function() {
     var text_length = $('#textarea').val().length;
     var text_remaining = text_max - text_length;
-  $('#textarea_feedback').html(text_remaining + ' characters remaining');
+  $('#textarea_feedback').html(text_remaining + ' chractrs reminng');
     });
 
   // PROFILE PAGE JAVASCRIPT
@@ -86,7 +86,50 @@ $( "#signupform" ).submit(function( event ) {
     $('.profile_info_container').hide();
   });
 
+  $('.delete_account_phrase').click( function() {
+    $('.delete_account_phrase').hide()
+    $('.are_you_sure').fadeIn()
+  });
+
+  $('.are_you_sure').click( function() {
+    $('.are_you_sure').hide()
+    $('.please_rate_us').fadeIn()
+  });
+
+  $('.please_rate_us').click( function() {
+    $('.please_rate_us').hide()
+    $('.maybe_next_time').fadeIn()
+  });
+
+  $('.maybe_next_time').click( function() {
+    $('.maybe_next_time').hide()
+    $('.just_kidding_fine').fadeIn()
+  });
+
+  $('.just_kidding_fine').click( function() {
+    $('.just_kidding_fine').hide()
+    $('.delete_user_button').fadeIn()
+  });
+
   $(".delete_user_button").click( function () {
     alert ("Your account has been deleted")
-  })
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

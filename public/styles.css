@@ -258,8 +258,68 @@
 	background-color: #D21A22;
 	border: none;
 	border-radius: 25px;
-	color: white;	
+	color: white;
+	display: none;
+	float: right;
+	margin-bottom: 10px;
 }
+
+.delete_account_phrase a {
+	text-decoration: none;
+	color: #C2FFFF;
+	font-size: 10px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+.are_you_sure a {
+	text-decoration: none;
+	color: #C2FFFF;
+	font-size: 10px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+.are_you_sure {
+	display: none;
+}
+
+.please_rate_us a {
+	text-decoration: none;
+	color: #C2FFFF;
+	font-size: 10px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+.please_rate_us {
+	display: none;
+}
+
+.maybe_next_time a {
+	text-decoration: none;
+	color: #C2FFFF;
+	font-size: 10px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+.maybe_next_time {
+	display: none;
+}
+
+.just_kidding_fine a {
+	text-decoration: none;
+	color: #C2FFFF;
+	font-size: 10px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+.just_kidding_fine {
+	display: none;
+}
+
 
 
 
