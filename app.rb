@@ -49,8 +49,7 @@ end
 # Landing page is unaccessable once you click into the site.
 get '/' do 
 	erb :landing, :layout => :landing_style
-end	
-
+end
 
 # homepage with 'feed' and site details
 get '/home' do
@@ -68,7 +67,7 @@ get '/profile' do
 	erb :profile
 end
 # for OTHER usersfeatures include account details, all posts, followers/following counts like on github
-post '/profile/other' do
+post '/other' do
 	# puts params[:clicked_user]
 	@clicked_user = User.where(username: params[:clicked_user]).first
 	puts @clicked_user.username

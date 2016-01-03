@@ -1,5 +1,4 @@
-<html>
-<body>
+<div class="other_profile_container">
 	<div class="profile_info_container">
 		<h1><%= @clicked_user.fname + " " + @clicked_user.lname%></h1>
 		<h2><%= @clicked_user.username%></h2>
@@ -8,9 +7,8 @@
 		<p> <%= @clicked_user.profile.location%></p>
 	</div>
 	<div class="profile_posts_container">
-			<% @clicked_user.posts.each do |post| %>
-					<p><%=post.content%></p>
-			<%end%>
+		<% @clicked_user.posts.each do |post| %>
+		<p><%=post.content%></p>
+		<%end%>
 	</div>
-</body>
-</html>
+</div>

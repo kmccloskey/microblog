@@ -9,9 +9,9 @@
 		<p> <%= current_user.profile.location%></p>
 	</div>
 	<div class="profile_posts_container">
-		<% current_user.posts.each do |post| %>
-		<p><%=post.content%></p>
-		<%end%>
+			<% current_user.posts.each do |post| %>
+					<p><%=post.content%></p>
+			<%end%>
 	</div>
 	<div class="edit_profile_form">
 		<form action="/edit_settings" method="POST">
