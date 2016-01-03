@@ -70,11 +70,11 @@ $( "#signupform" ).submit(function( event ) {
   });
   // text counter for mumble box
   var text_max = 150;
-  $('#textarea_feedback').html(text_max + ' characters remaining');
+  $('#textarea_feedback').html(text_max + ' chractrs reminng');
   $('#textarea').keyup(function() {
     var text_length = $('#textarea').val().length;
     var text_remaining = text_max - text_length;
-  $('#textarea_feedback').html(text_remaining + ' characters remaining');
+  $('#textarea_feedback').html(text_remaining + ' chractrs reminng');
     });
 
   // PROFILE PAGE JAVASCRIPT

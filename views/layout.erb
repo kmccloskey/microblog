@@ -14,27 +14,27 @@
 	<div class="header">
 		<nav class="navbar">
 			<ul>
-				<li><a href="/home" class="home_link">| Home |</a></li>
-				<li><a href="/profile" class="profile_link">| Profile |</li>
-				<li><a href="/followers" class="followers_link">| Followers |</a></li>
-				<li><a href="#" class="new_mumble">| New Mumble |</a></li>
+				<li><a href="/home" class="home_link">| Hme |</a></li>
+				<li><a href="/profile" class="profile_link">| Prfil |</li>
+				<li><a href="/followers" class="followers_link">| Fllowrs |</a></li>
+				<li><a href="#" class="new_mumble">| Nw Mumbl |</a></li>
 				<li><form method="POST" action="/sign_out" id="sign_out_button">
-					<input type="Submit" class="signOut_button" value="| Sign Out |">
+					<input type="Submit" class="signOut_button" value="| Sgn Ot |">
 				</form></li>
 			</ul>
 		</nav>
 	</div>
 	<div class="post_box">
 		<form method="POST" action="/mumbl" id="mumble_post">
-			<label for="username">What are you mumbling about?</label>
+			<label for="username">Wht ar yo mumblng abut?</label>
 			<br>
 			<textarea type="text" id="textarea" name="mumbl" rows="4" cols="50" maxlength="150"></textarea>
 			<br>
 			<div id="textarea_feedback"></div>
 			<br>
-			<input id="new_post_button" type="submit" value="Mumble Me">
+			<input id="new_post_button" type="submit" value="Mmble M">
 		</form>
-		<h1 class="close_mumble"><a href="#">Close</a></h1>
+		<h1 class="close_mumble"><a href="#">Clse</a></h1>
 	</div>
 	<div class="container">
 		<%= yield %>		
