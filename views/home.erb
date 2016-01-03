@@ -3,8 +3,8 @@
 	<div class="last_ten_post_container">
 		<div class="post_username">
 			<form method="POST" action="/profile/other">
-				<input hidden class="hider" name="clicked_user" value="<%= post.user.username%>">
-				<button name="clicked_user"><%= post.user.username %></button> mumbls...	
+				<input hidden name="clicked_user" value="<%= post.user.username%>"/>
+				<button><%= post.user.username %></button> mumbls...	
 			</form>
 		</div>
 		<div class="post_content">

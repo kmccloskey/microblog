@@ -69,9 +69,9 @@ get '/profile' do
 end
 # for OTHER usersfeatures include account details, all posts, followers/following counts like on github
 post '/profile/other' do
-	puts "CHECK--------------------"
+	# puts params[:clicked_user]
 	@clicked_user = User.where(username: params[:clicked_user]).first
-	puts @clicked_user
+	puts @clicked_user.username
 	erb :other_profile
 end
 
