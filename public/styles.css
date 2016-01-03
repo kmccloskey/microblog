@@ -49,7 +49,7 @@
 .container {
 	overflow: auto;
 	background-color: rgba(255, 255, 255, 0.5);
-	width: 900px;
+	width: 600px;
 	margin: 0 auto;
 	margin-top: 50px;
 	padding: 0px 20px;
@@ -69,6 +69,10 @@
 	color: white;
 	text-shadow: 2px 2px black;
 	font-family: 'Alfa Slab One', cursive;
+}
+
+.post_box {
+	border-top: 2px white solid;
 }
 
 .landing_background {
@@ -199,13 +203,17 @@
 	text-decoration: none;
 	border: 1px solid #E8B944;
 	padding: 3px;
+	text-align: right;
+	display: inline-block;
 }
 
 #new_post_button {
 	width: 100px;
-	background-color: #DFFDDF;
+	background-color: white;
+	color: black;
 	height: 35px;
 	margin-top: 10px;
+	border-radius: 5px;
 }
 
 #textarea_feedback {
@@ -215,7 +223,7 @@
 .follower_list {
 	border: 1px solid black;
 	height: 550px;
-	width: 300px;
+	width: 200px;
 	float: left;
 	overflow: scroll;
 	text-align: center;
@@ -224,7 +232,7 @@
 .following_list {
 	border: 1px solid black;
 	height: 550px;
-	width: 300px;
+	width: 200px;
 	float: right;
 	overflow: scroll;
 	text-align: center;
@@ -246,7 +254,12 @@
 	color: white;
 }
 
-
+.delete_user_button {
+	background-color: #D21A22;
+	border: none;
+	border-radius: 25px;
+	color: white;	
+}
 
 
 

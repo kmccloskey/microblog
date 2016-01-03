@@ -85,4 +85,8 @@ $( "#signupform" ).submit(function( event ) {
     $('.edit_profile_button').hide();
     $('.profile_info_container').hide();
   });
+
+  $(".delete_user_button").click( function () {
+    alert ("Your account has been deleted")
+  })
 });

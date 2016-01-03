@@ -124,6 +124,12 @@ post '/edit_settings' do
 	redirect '/profile'
 end
 
+post '/delete_current_user' do
+	current_user
+	current_user.destroy
+	redirect '/'
+end
+
 # route for new posts
 post '/mumbl' do
 	# new_post is here so it can be passed into mumbl function and used after.
