@@ -1,5 +1,9 @@
 <div class="other_profile_container">
 	<div class="profile_info_container">
+		<form method="POST" action="/follow">
+				<input hidden name="clicked_user" value="<%= @clicked_user.username%>"/>
+				<button class="user_click">Follow <%= @clicked_user.username %></button>	
+		</form>
 		<h1><%= @clicked_user.fname + " " + @clicked_user.lname%></h1>
 		<h2><%= @clicked_user.username%></h2>
 		<p> <%= @clicked_user.profile.bio%></p>
