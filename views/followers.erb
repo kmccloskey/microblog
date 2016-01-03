@@ -1,46 +1,20 @@
 <div class="follower_list">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
+	<% current_user.followers.each do |user| %>
+		<div class="post_username">
+			<form method="POST" action="/other">
+				<input hidden name="clicked_user" value="<%= user.username%>"/>
+				<button class="user_click"><h3><%= user.username %></h3></button>
+			</form>
+		</div>
+	<% end %>
 </div>
 <div class="following_list">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
-	<img src="https://placeholdit.imgix.net/~text?txtsize=25&txt=300%C3%97100&w=300&h=100" alt="">
+	<% current_user.followed.each do |user| %>
+		<div class="post_username">
+			<form method="POST" action="/other">
+				<input hidden name="clicked_user" value="<%= user.username%>"/>
+				<button class="user_click"><h3><%= user.username %></h3></button>
+			</form>
+		</div>
+	<% end %>
 </div>
