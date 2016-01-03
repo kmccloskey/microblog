@@ -9,9 +9,15 @@
 		<p> <%= current_user.profile.location%></p>
 	</div>
 	<div class="profile_posts_container">
+<<<<<<< HEAD
+			<% current_user.posts.each do |post| %>
+					<p><%=post.content%></p>
+			<%end%>
+=======
 		<% current_user.posts.each do |post| %>
 		<p><%=post.content%></p>
 		<%end%>
+>>>>>>> 1a63841854b03b8b474a5c8050b0d2149bf972eb
 	</div>
 	<div class="edit_profile_form">
 		<form action="/edit_settings" method="POST">
@@ -24,11 +30,14 @@
 			<input type="submit">
 		</form>
 	</div>
+<<<<<<< HEAD
+=======
 	<div class="delete_user">
 		<form action="/delete_current_user" method="POST">
 			<input type="submit" class="delete_user_button" value="Delete Account">
 		</form>
 	</div>
+>>>>>>> 1a63841854b03b8b474a5c8050b0d2149bf972eb
 </body>
 </html>
 
