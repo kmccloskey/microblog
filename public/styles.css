@@ -49,7 +49,7 @@
 .container {
 	overflow: auto;
 	background-color: rgba(255, 255, 255, 0.5);
-	width: 900px;
+	width: 600px;
 	margin: 0 auto;
 	margin-top: 50px;
 	padding: 0px 20px;
@@ -215,7 +215,7 @@
 .follower_list {
 	border: 1px solid black;
 	height: 550px;
-	width: 300px;
+	width: 200px;
 	float: left;
 	overflow: scroll;
 	text-align: center;
@@ -224,7 +224,7 @@
 .following_list {
 	border: 1px solid black;
 	height: 550px;
-	width: 300px;
+	width: 200px;
 	float: right;
 	overflow: scroll;
 	text-align: center;
@@ -246,7 +246,12 @@
 	color: white;
 }
 
-
+.delete_user_button {
+	background-color: #D21A22;
+	border: none;
+	border-radius: 25px;
+	color: white;	
+}
 
 
 
