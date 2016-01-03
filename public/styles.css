@@ -71,6 +71,10 @@
 	font-family: 'Alfa Slab One', cursive;
 }
 
+.post_box {
+	border-top: 2px white solid;
+}
+
 .landing_background {
 	background-color: rgba(0, 0, 0, .3);
 	width: 900px;
@@ -199,13 +203,17 @@
 	text-decoration: none;
 	border: 1px solid #E8B944;
 	padding: 3px;
+	text-align: right;
+	display: inline-block;
 }
 
 #new_post_button {
 	width: 100px;
-	background-color: #DFFDDF;
+	background-color: white;
+	color: black;
 	height: 35px;
 	margin-top: 10px;
+	border-radius: 5px;
 }
 
 #textarea_feedback {
