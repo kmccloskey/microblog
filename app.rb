@@ -138,5 +138,5 @@ post '/mumbl' do
 	mumbl(params[:mumbl], new_post)
 	# content of post is changed to mumblfied "new_post".
 	Post.create(content:new_post, user_id: current_user.id)
-	redirect '/profile'
+	redirect back
 end
