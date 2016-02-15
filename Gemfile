@@ -1,6 +1,5 @@
-$:.unshift File.expand_path("../", __FILE__)
 source 'https://rubygems.org'
-ruby "2.2.4"
+ruby "2.2.3"
 
 gem 'activerecord'
 gem 'sinatra-activerecord'
