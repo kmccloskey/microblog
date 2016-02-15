@@ -1,3 +1,4 @@
+$:.unshift File.expand_path("../", __FILE__)
 source 'https://rubygems.org'
 ruby "2.2.4"
 
