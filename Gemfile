@@ -1,15 +1,25 @@
 source 'https://rubygems.org'
-ruby "2.2.3"
-
+# in your Gemfile
 gem 'activerecord'
+# the actual ActiveRecord library
 gem 'sinatra-activerecord'
-gem 'rake'
-gem 'sinatra-flash'
+# the adapter between Sinatra and
+# the ActiveRecord library
 
 group :development do
-	gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :production do
-	gem 'pg'
+	gem 'pg', '~> 0.18.4'
 end
+
+# the database adapter to use the
+# sqlite3 db system with ActiveRecord
+gem 'rake'
+# a command line task runner (more on this
+# later)
+gem 'sinatra-flash'
+gem 'sinatra-redirect-with-flash'
+
+gem 'activesupport', '~> 4.2', '>= 4.2.5'
