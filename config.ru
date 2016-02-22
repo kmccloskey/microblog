@@ -1,2 +1,2 @@
-require './microblog'
+require './app'
 run Sinatra::Application
